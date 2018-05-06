@@ -15,17 +15,31 @@
 </head>
 <body>
   <div class="container-fluid">
+    <div id="spinner" class="text-center weatherDiv" style="display: none">
+      <p>Loading weather</p>
+      <i class="fa fa-spinner fa-spin"></i>
+    </div>
 
-      <p>Click the button to get your coordinates.</p>
+    <!-- <p>Click the button to get your weather.</p>
 
-      <button>Try It</button>
-      
+    <button id="fetchWeather">Get weather</button> -->
+    <div class="text-center">
+      <h1>FCC Weather</h1>
       <p id="demo"></p>
-
-      <p id="location"></p>
-      <p id="temperature"></p>
-      <p id="condition"></p>
-      <img id="icon" src="" alt="weather icon">
+    </div>
+    
+    <div class="text-center weatherDiv">
+      <p><span id="location"></span></p>
+      <div id="temp">
+        <p><span id="tempF"></span><a href="#" class="tempToggle">&#8457;</a></p>
+        <p style="display: none"><span id="tempC"></span><a href="#" class="tempToggle">&#8451;</a></p>
+      </div>
+      <p><img id="icon" src="" alt="weather icon"><span id="condition"></span></p>
+    </div>
+    
+    
+    
+    
     
   </div><!-- .container-fluid -->
 </body>

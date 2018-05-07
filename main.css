@@ -1,17 +1,54 @@
 body {
-  background-color: #303030;
+  background-color: #404040;
   color: #fff;
 }
 
 .weatherDiv {
-  /* display: none; */
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-.fa-spin {
-  /* color: #fff; */
-  font-size: 48px;
+h3#city {
+  margin-bottom: 1rem;
+}
+
+button.tempToggle {
+  vertical-align: 20%;
+  margin-left: .8em;
+}
+
+img#icon {
+  vertical-align: -60%;
+  margin-left: -1rem;
+}
+
+/* Pulse the spinner div opacity */
+#spinner {
+  -webkit-animation: pulse 2s infinite;
+  -moz-animation: pulse 2s infinite;
+  -o-animation: pulse 2s infinite;
+  animation: pulse 2s infinite;
+}
+
+@-webkit-keyframes pulse {
+  0%   { opacity: .6; }
+  50% { opacity: 1; }
+  100% { opacity: .6; }
+}
+@-moz-keyframes pulse {
+  0%   { opacity: .6; }
+  50% { opacity: 1; }
+  100% { opacity: .6; }
+}
+@-o-keyframes pulse {
+  0%   { opacity: .6; }
+  50% { opacity: 1; }
+  100% { opacity: .6; }
+}
+@keyframes pulse {
+  0%   { opacity: .6; }
+  50% { opacity: 1; }
+  100% { opacity: .6; }
 }

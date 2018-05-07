@@ -6,7 +6,8 @@
   <title>FCC Weather</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <!-- <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -15,32 +16,24 @@
 </head>
 <body>
   <div class="container-fluid">
+
     <div id="spinner" class="text-center weatherDiv" style="display: none">
       <p>Loading weather</p>
-      <i class="fa fa-spinner fa-spin"></i>
+      <i class="fas fa-spinner fa-pulse fa-3x"></i>
     </div>
-
-    <!-- <p>Click the button to get your weather.</p>
-
-    <button id="fetchWeather">Get weather</button> -->
+    
     <div class="text-center">
       <h1>FCC Weather</h1>
       <p id="demo"></p>
     </div>
     
     <div class="text-center weatherDiv">
-      <p><span id="location"></span></p>
-      <div id="temp">
-        <p><span id="tempF"></span><a href="#" class="tempToggle">&#8457;</a></p>
-        <p style="display: none"><span id="tempC"></span><a href="#" class="tempToggle">&#8451;</a></p>
-      </div>
-      <p><img id="icon" src="" alt="weather icon"><span id="condition"></span></p>
+      <h3 id="city"><span id="location"></span></h3>
+      <h4 class="temp"><span id="tempF"></span><button class="btn btn-sm btn-primary tempToggle">&#8457;</button></h4>
+      <h4 class="temp" style="display: none"><span id="tempC"></span><button class="btn btn-sm btn-primary tempToggle">&#8451;</button></h4>
+      <h4><img id="icon" src="" alt="weather icon"><span id="condition"></span></h4>
     </div>
-    
-    
-    
-    
-    
+
   </div><!-- .container-fluid -->
 </body>
 </html>

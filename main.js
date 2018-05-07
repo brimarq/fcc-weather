@@ -50,7 +50,7 @@ $(document).ready(function() {
     $('.weatherDiv').toggle();
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(function(position) {
-        console.log(position.coords);
+        console.log(position);
 
         var weatherUrl = 'https://fcc-weather-api.glitch.me/api/current?lat=' + position.coords.latitude + '&lon=' + position.coords.longitude;
         console.log(weatherUrl);
@@ -71,12 +71,17 @@ $(document).ready(function() {
           $('#tempF').text(data.tempF);
           $('#tempC').text(data.tempC);
           $('#condition').text(data.cond);
-          $('#icon').attr('src', data.icon);
-          $('#icon').on('load', function() {
+          if (data.icon) {
+            $('#icon').attr('src', data.icon);
+            $('#icon').on('load', function() {
+              $('.weatherDiv').fadeToggle(400);
+            });
+          } else {
+            $('#icon').hide();
             $('.weatherDiv').fadeToggle(400);
-          });
-          
+          }
         });
+
       });
     } else { 
         x.innerHTML = "Geolocation is not supported by this browser.";
@@ -93,8 +98,12 @@ $(document).ready(function() {
   //   getWeather();
   // });
 
+  // $('.tempToggle').on('click', function() {
+  //   $('#temp').find('p').toggle();
+  // });
+
   $('.tempToggle').on('click', function() {
-    $('#temp').find('p').toggle();
+    $('.temp').toggle();
   });
 
 });

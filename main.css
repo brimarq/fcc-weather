@@ -3,6 +3,12 @@ body {
   color: #fff;
 }
 
+#noGeo {
+  display: none;
+  background-color:#ffc107;
+  color: #212529;
+}
+
 .weatherDiv {
   position: absolute;
   top: 50%;
